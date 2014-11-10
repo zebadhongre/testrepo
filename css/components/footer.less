@@ -1,0 +1,232 @@
+/*START: footer */
+@font3Color:#717171;
+@alternativeFont:"lucida grande";
+@alternativeColor: #000;
+footer[role="main"] {
+  li{
+    list-style:none;
+    a{
+      color:@font3Color;
+      text-decoration: none;
+    }
+    &:hover{
+      color:@linkHoverColor;
+    }
+  }
+
+  @borderColor:#eee;
+
+  background-color: white;
+  border-top: 2px solid black;
+  margin-top:20px;
+
+  .newsletter-signup{
+    min-height: 40px;
+    padding: 20px 0 0 10px;
+    .message {
+      padding-top: 3px;
+      text-align: right;
+    }
+    .im-in{
+      padding: 3px 22px;
+      margin-left: 4px;
+    }
+  }
+
+  .footer-items{
+    border-top:1px solid @borderColor;
+    min-height: 250px;
+    padding-top:30px;
+    #gradient .vertical(white,lighten(#eee,2%));
+    .items{
+      ul{
+        display: inline-block;
+        float: left;
+        width: 19%;
+        li{
+          &.head{
+            text-transform: uppercase;
+            color: black;
+            margin-bottom: 10px;
+          }
+        }
+
+        &:nth-child(2), &:nth-child(3){
+          width: 13%;
+        }
+
+        &:nth-child(5){
+          width: 18%;
+        }
+
+        &:last-child{
+          width: 16%;
+        }
+      }
+    }
+    .branding{
+      float:right;
+      .main-logo{
+        img{
+          width: 80%;
+        }
+      }
+      small{
+        font-size: 74%;
+        margin-top: 11px;
+        float: left;
+      }
+    }
+  }
+  .accepted-payment-types {
+    margin:20px 0;
+    img{
+      height: 30px;
+    }
+  }
+
+  .back-to-top-wrapper{
+    position: fixed;
+    height: 1px;
+    bottom: -1px;
+    width: 100%;
+
+    .container{
+      position: relative;
+    }
+
+    .back-to-top{
+      position: absolute;
+      right: 40px;
+      bottom: 150px;
+      display: none;
+      z-index: 1;
+      margin-bottom: 10px;
+    }
+
+    .positioned-link{
+      font-size: 24px;
+      padding: 12px 14px 10px;
+    }
+  }
+
+  .bottom-slide-in-wrapper{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 5;
+
+    .display{
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      min-width: 400px;
+      border-top: 2px solid #000;
+      display: none;
+      background-color: #fff;
+      .box-shadow(0 0 2px rgba(0, 0, 0, 0.7));
+      z-index: 7;
+
+      .padded{
+        padding: 20px;
+        .box-sizing(border-box);
+        display: block;
+      }
+
+      .display-title{
+        font-size: 24px;
+        color: @font3Color;
+        font-family: @alternativeFont;
+      }
+
+      .display-message{
+        font-size: 15px;
+        font-family: @alternativeFont;
+      }
+
+      .close-btn{
+        position:absolute;
+        top:5px;
+        right:5px;
+        background:#fff no-repeat center center;
+        width:27px;
+        height:27px;
+        text-indent:-9000px;
+        outline:none;
+        .box-shadow(1px 1px 2px rgba(0,0,0,0.2));
+        .opacity(70);
+        &:hover{
+          .opacity(100);
+        }
+      }
+
+      &:hover{
+        background-color: @alternativeColor;
+      }
+    }
+
+    .carousel{
+      margin-bottom: 0;
+
+      .carousel-indicators{
+        bottom: 15px;
+        top: auto;
+
+        li{
+          background-color: #ddd;
+          cursor: pointer;
+
+          &.active{
+            background-color: @linkHoverColor;
+          }
+        }
+      }
+    }
+  }
+}
+.footer.popular-content-section{
+
+  font-size: 12px;
+  margin-top: 20px;
+  margin-bottom: 80px;
+
+  .grid{
+    padding: 0 3%;
+    .box-sizing(border-box);
+  }
+
+  .listing-section{
+    margin: 20px 0;
+    ul{
+
+      float: left;
+      width: 24%;
+      margin: 0 5px 20px 5px;
+      height: 102px;
+      overflow-y: hidden;
+
+      li{
+        line-height:16px;
+
+        a{
+          color: @linkHoverColor;
+          font-weight: normal;
+        }
+        &.header{
+          margin-bottom: 5px;
+          a{
+            color:@linkColor;
+            font-size: 14px;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}
+[data-page-type="signin"],[data-page-type="signup"],[data-page-type="program"]{
+  footer[role="main"] {
+    margin-top:0px;
+  }
+}
+/*END: footer */
